@@ -1,0 +1,25 @@
+<html>
+<head><title>Login</title>
+    <link rel="icon" href="https://source.unsplash.com/user/erondu/10x10">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: crimson">
+<form action="{% url 'login' %}" method="POST">
+   {% csrf_token %}
+    <div class="container">
+    <div class="select2-container--classic">
+        <div class="row">
+          <div class="bordered">
+    {{ form.as_p }}
+    <input type="submit" value="Login" class="btn btn-success">
+      </div>
+    </div>
+    </div>
+    </div>
+</form>
+</body>
+</html>
